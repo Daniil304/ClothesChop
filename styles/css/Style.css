@@ -1,0 +1,636 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    background-color: #fff;
+    color: white;
+
+    background: url("../../src/img/fon.jpg") no-repeat local;
+    background-position: 50% 0%;
+    width: 100%;
+    height: 100%;
+    color: black;
+ }
+
+ .container {
+     max-width: 1200px;
+     margin: 0 auto;
+	 padding: 0px 15px;
+	 width: 100%;
+ }
+ 
+/* Navigation */
+.header_nav {
+    max-width: 100%;
+    height: 780px;
+	margin-bottom: 0;
+ }
+
+ .nav_bar  {
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+ }
+
+ .nav_bar .nav_ref {
+     margin: 50px 65px;
+     text-decoration: none;
+     color: black;
+     font-size: 20px;
+     transition: color 0.2s linear;
+     display: inline-block;
+     position: relative;
+ }
+
+ #btn_delivery {
+    color: white;
+}
+
+#btn_delivery:hover{
+    color: rgb(255, 0, 255); 
+}
+
+ .nav_bar .nav_ref:hover {
+    color: rgb(255, 0, 255); 
+ }
+
+ .nav_ref:after{ 
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    opacity: 0; 
+    background-color: rgb(255, 0, 255); 
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    transition: opacity 0.3s linear;
+     
+}
+
+.nav_ref:hover:after{
+    opacity: 1;
+    border-radius: 120px;
+    transition: opacity 0.3s linear;
+    background-color: rgb(255, 0, 255); 
+}
+
+/* Header*/
+.header_welcome {
+    margin-top: 85px;
+    color: black;
+}
+
+.welcome_text {
+    margin: 0 auto;
+    font-size: 10vh;
+    font-family: 'Gowun Batang', serif;
+}
+
+.welcome_subtext span {
+    font-size: 48px;
+}
+
+/* Link */
+.link {
+	position: relative;
+    top: 50px;
+	display: inline-block;
+	padding: 15px 30px;
+	color: rgb(255, 0, 255);
+	letter-spacing: 4px;
+	text-decoration: none;
+	font-size: 24px;
+	overflow: hidden;
+	transition: .2s;
+    font-family: 'Georama', italic;
+}
+
+.link:hover {
+	color: #ffffff;
+	background: rgb(255, 0, 255);
+	box-shadow: 0 0 10px rgb(255, 0, 255), 0 0 40px rgb(255, 0, 255), 0 0 80px rgb(255, 0, 255);
+	border-radius: 10px;
+	transition-delay: 1s;
+}
+
+.link_span {
+	position: absolute;
+	display: block;
+}
+
+.link_span:nth-child(1) 
+{
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg,transparent,rgb(255, 0, 255));
+}
+
+.link:hover .link_span:nth-child(1) {
+	left: 100%;
+	transition: 0.75s;
+}
+
+.link_span:nth-child(3) 
+{
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg,transparent,rgb(255, 0, 255));
+}
+
+.link:hover .link_span:nth-child(3) {
+	right: 100%;
+	transition: 1s;
+	transition-delay: .5s;
+
+}
+
+.link_span:nth-child(2) 
+{
+	top: -100%;
+	right: 0%;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg,transparent,rgb(255, 0, 255));
+}
+
+.link:hover .link_span:nth-child(2) {
+	top: 100%;
+	transition: 0.75s;
+	transition-delay: .25s;
+}
+
+.link_span:nth-child(4) 
+{
+	bottom: -100%;
+	left: 0%;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg,transparent,rgb(255, 0, 255));
+}
+
+.link:hover .link_span:nth-child(4) {
+	bottom: 100%;
+	transition: 0.75s;
+	transition-delay: .75s;
+}
+
+/* Catalog */
+.catalog {
+    background-color: rgb(36, 33, 33);
+    width: 100%;
+    color:white;
+    min-height: 700px;
+    /* position: relative; */
+}
+
+.catalog_content{
+    display: flex;
+    justify-content: space-between;
+	flex-wrap: wrap;
+	background-color: rgb(36, 33, 33);
+}
+
+.catalog_img{
+    display: flex;
+	margin: 40% 0px 20px 20px;
+}
+
+.catalog_subContent {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.catalog_subname{
+    display: inline-flex;
+    font-weight: 400;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+/* Catalog Shine Btn */
+.catalog_btn{
+    display: inline-flex;
+}
+
+.shine_button{
+    justify-content: space-around;
+    border-radius: 7px;
+	position: relative;
+	padding: 15px 30px;
+	background: #27022d;
+	color: #fff;
+	text-decoration: none;
+	letter-spacing: 1px;
+	border: 1px solid #000;
+	transition: .5s;
+	overflow: hidden;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 15px;
+}
+
+.shine_button:hover {
+	background: #a41ee9;
+}
+
+.shine_button:nth-child(2):hover {
+	background: #ff3c7f;
+}
+
+.shine_button::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, transparent, #fff, transparent);
+	transition: .5s;
+}
+
+.shine_button:hover::before {
+	left: 100%;
+}
+
+/* Clothes */
+.clothes_title{
+    margin-bottom: 50px;
+    font-family: Didact Gothic, Arial;
+    font-weight: 400;
+    font-size: 60px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.clothes_shop{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.clothes_reverse {
+	color: white;
+}
+
+#reverse_title {
+	color: white;
+}
+
+.clothes_shop_content{
+    text-align: center;
+    font-size: 24px;
+    font-family: Didact Gothic,Arial;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.clothes_img {
+    height: 370px;
+    width: 370px;
+}
+
+.last_child {
+    margin-bottom: 150px;
+}
+.discaunt_bg {
+	background-color: #000;
+}
+/* Information */
+.inform_title {
+    margin-bottom: 50px;
+    font-family: Didact Gothic,Arial;
+    font-weight: 400;
+    font-size: 60px;
+    text-align: center;
+}
+
+.payment_delivery {
+	display: flex;
+	justify-content: space-around;
+}
+
+.payment_paragraph .delivery_paragraph {
+	font-family: Roboto,Arial;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.payment_paragraph .fas {
+	font-size: 96px;
+	display: flex;
+}
+
+.delivery_paragraph .fas {
+	font-size: 96px;
+	display: flex;
+}
+
+/* Social Links */
+.social_inform {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.social_media{
+    margin: 0;
+    padding: 0;
+	display: flex;
+	justify-content: center;
+    align-items: top;
+	min-height: 50vh;
+}
+
+.social_title {
+    margin-bottom: 50px;
+    font-family: Didact Gothic, Arial;
+    font-weight: 400;
+    font-size: 60px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.sci {
+	position: relative;
+	display: flex;
+}
+
+.sci .sci_element {
+	list-style: none;
+}
+
+.sci_element{
+    max-height: 5%;
+}
+
+.sci .sci_element::before {
+	content: attr(data-text);
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, calc(-50% + 120px));
+	font-size: 14vw;
+	pointer-events: none;
+	font-weight: 700;
+	transition: 0.5s;
+	opacity: 0;
+}
+
+.sci .sci_element:hover::before {
+	opacity: 0.1;
+	transform: translate(-50%, calc(-50% + 150px));
+}
+
+.sci .sci_element a {
+	position: relative;
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	background: #ccc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color:  #333;
+	border-radius: 10px;
+	text-decoration: none;
+	margin: 20px;
+	font-size: 4em;
+	transform-style: preserve-3d;
+	perspective: 500px;
+	box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+	transition: background 0.25s;
+}
+
+.js-tilt-glare {
+	border-radius: 10px;
+}
+
+.sci .sci_element a:hover.vk{
+	background: #1877f2;
+}
+
+.sci .sci_element a:hover.inst{
+	background: #e4405f;
+}
+
+.sci .sci_element a:hover.viber{
+	background: #941b8a;
+}
+
+.sci .sci_element a .fab {
+	transition: 0.25s;
+	pointer-events: none;
+}
+
+.sci .sci_element a:hover .fab {
+	color: #fff;
+	transform: scale(1.5) translateZ(50px);
+}
+
+.sci .sci_element a .fas {
+	transition: 0.25s;
+	pointer-events: none;
+}
+
+.sci .sci_element a:hover .fas {
+	color: #fff;
+	transform: scale(1.5) translateZ(50px);
+}
+
+/* Footer */
+.footer{
+	padding-top: 10px;
+	background-color: black;
+	max-width: 100%;
+ }
+ .footer_list{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: wrap;
+ }
+ .footer_el{
+	min-width: 25%;
+	margin-bottom: 40px;
+ }
+
+ .footer_title{
+	margin-bottom: 20px;
+	font-weight: 500;
+	font-size: 27px;
+	line-height: 130%;
+	color: #FFFFFF;
+ }
+ .footer_ul{
+	list-style: none;
+ }
+ .footer_li{
+	color: #E0E0E0;
+	font-size: 17px;
+ }
+ .footer_li > a{
+	text-decoration: none;
+	margin-bottom: 15px;
+	font-weight: normal;
+	font-size: 17px;
+	color: #E0E0E0;
+	line-height: 135%;
+	transition: all .5s ease;
+ }
+ .footer_li > a:hover{
+	text-decoration: underline;
+	color: #ffc41e;
+ }
+
+ /* Responsive */
+ @media (max-width: 1200px) {
+	.container {
+		max-width: 970px;
+	}
+
+	.welcome_subtext span {
+		font-size: 48px;
+	}
+
+	.link {
+		display: none;
+	}
+
+ }
+
+ @media (max-width: 992px) {
+	.container {
+		max-width: 750px;
+	}
+
+	.clothes_shop {
+		justify-content: center;
+	}
+ }
+
+ @media (max-width: 769px) { /*Ipad*/
+	.container {
+		max-width: none;
+	}
+
+	.catalog_content {
+		justify-content: center;
+	}
+
+	.welcome_text {
+		font-size: 70px;
+		font-family: 'Gowun Batang', serif;
+	}
+
+	.welcome_subtext span {
+		font-size: 30px;
+	}
+
+	.link {
+		font-size: 35px;
+	}
+
+	.catalog_img {
+		margin-right: 30px;
+	}
+
+	.shine_button {
+		font-size: 20px;
+	}
+ }
+
+ @media (max-width: 695px) {
+	 .nav_panel {
+		 display: none;
+	 }
+
+	 .header_welcome {
+		 margin-top: 40%;
+	 }
+
+	 .header_nav {
+		height: 520px;
+	 }
+
+	 .welcome_subtext span {
+		 font-size: 18px;
+	 }
+
+	 .catalog_content {
+		 justify-content: center;
+	 }
+ }
+
+ @media (max-width: 510px) {
+	 .sci {
+		 flex-wrap: wrap;
+		 margin: 0px 0px 10px 10px;
+		 justify-content: center;
+	 }
+
+	 .social_title {
+		 margin-bottom: 15px;
+	 }
+
+	 .sci_element::before {
+		 display: none;
+	 }
+
+	 .sci_element:hover::before {
+		 display: none;
+	 }
+
+	 .shine_button:nth-child(2):hover {
+		 display: none;
+	 }
+ }
+
+ @media (max-width: 421px) {
+	 .catalog_img {
+		 width: 85%;
+	 }
+
+	 .catalog_subContent {
+		 font-size: 50%;
+	 }
+
+	 .shine_button {
+		 font-size: 13px;
+		 padding: 10px 10px 10px 10px;
+		 margin-bottom: 15px;
+	 }
+
+	 .clothes_img {
+		 width: 85%;
+		 height: auto;
+		 /* justify-content: center; */
+	 }
+
+	.clothes_title {
+			font-size: 40px;
+		}
+	 }
+
+ @media (max-width: 285px) {
+	 /* .clothes_title {
+		 font-size: 40px;
+	 } */
+ }
+
+ /* Height */
+ /* @media (max-height: 812px) {
+	 .catalog_content {
+		 min-height: 812px;
+	 }
+ } */
